@@ -1,0 +1,14 @@
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\bin\Debug\net9.0\EstructuraDatos2025.exe
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\bin\Debug\net9.0\EstructuraDatos2025.deps.json
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\bin\Debug\net9.0\EstructuraDatos2025.runtimeconfig.json
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\bin\Debug\net9.0\EstructuraDatos2025.dll
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\bin\Debug\net9.0\EstructuraDatos2025.pdb
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\obj\Debug\net9.0\EstructuraDatos2025.GeneratedMSBuildEditorConfig.editorconfig
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\obj\Debug\net9.0\EstructuraDatos2025.AssemblyInfoInputs.cache
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\obj\Debug\net9.0\EstructuraDatos2025.AssemblyInfo.cs
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\obj\Debug\net9.0\EstructuraDatos2025.csproj.CoreCompileInputs.cache
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\obj\Debug\net9.0\EstructuraDatos2025.dll
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\obj\Debug\net9.0\refint\EstructuraDatos2025.dll
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\obj\Debug\net9.0\EstructuraDatos2025.pdb
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\obj\Debug\net9.0\EstructuraDatos2025.genruntimeconfig.cache
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\obj\Debug\net9.0\ref\EstructuraDatos2025.dll
