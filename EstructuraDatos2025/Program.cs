@@ -1,5 +1,5 @@
 ﻿// Console.WriteLine se utiliza para imprimir en pantalla
-Console.WriteLine("UNIVERSIDAD ESTATAL AMAZONICA--->");
+Console.WriteLine("UNIVERSIDAD ESTATAL AMAZONICA");
 Console.WriteLine("AUTOR: RAUL VASQUEZ LASCANO");
 
 Rectangulo miRectangulo = new Rectangulo (5.2 , 5.4);

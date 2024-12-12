@@ -12,3 +12,4 @@ d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\Estructura
 d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\obj\Debug\net9.0\EstructuraDatos2025.pdb
 d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\obj\Debug\net9.0\EstructuraDatos2025.genruntimeconfig.cache
 d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\obj\Debug\net9.0\ref\EstructuraDatos2025.dll
+d:\UEA\03_2024-2025\03_ESTRUCTURA_DATOS\PROYECTOS\EstructuraDatos2025\EstructuraDatos2025\obj\Debug\net9.0\EstructuraDatos2025.sourcelink.json
