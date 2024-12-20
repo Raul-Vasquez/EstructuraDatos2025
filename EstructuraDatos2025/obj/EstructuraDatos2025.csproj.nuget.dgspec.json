@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\UEA\\03_2024-2025\\03_ESTRUCTURA_DATOS\\PROYECTOS\\EstructuraDatos2025\\EstructuraDatos2025\\EstructuraDatos2025.csproj": {}
+    "D:\\UEA\\03_2024-2025\\03_ESTRUCTURA_DATOS\\PROYECTOS\\EstructuraDatos2025\\EstructuraDatos2025\\EstructuraDatos2025.csproj": {}
   },
   "projects": {
-    "d:\\UEA\\03_2024-2025\\03_ESTRUCTURA_DATOS\\PROYECTOS\\EstructuraDatos2025\\EstructuraDatos2025\\EstructuraDatos2025.csproj": {
+    "D:\\UEA\\03_2024-2025\\03_ESTRUCTURA_DATOS\\PROYECTOS\\EstructuraDatos2025\\EstructuraDatos2025\\EstructuraDatos2025.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\UEA\\03_2024-2025\\03_ESTRUCTURA_DATOS\\PROYECTOS\\EstructuraDatos2025\\EstructuraDatos2025\\EstructuraDatos2025.csproj",
+        "projectUniqueName": "D:\\UEA\\03_2024-2025\\03_ESTRUCTURA_DATOS\\PROYECTOS\\EstructuraDatos2025\\EstructuraDatos2025\\EstructuraDatos2025.csproj",
         "projectName": "EstructuraDatos2025",
-        "projectPath": "d:\\UEA\\03_2024-2025\\03_ESTRUCTURA_DATOS\\PROYECTOS\\EstructuraDatos2025\\EstructuraDatos2025\\EstructuraDatos2025.csproj",
+        "projectPath": "D:\\UEA\\03_2024-2025\\03_ESTRUCTURA_DATOS\\PROYECTOS\\EstructuraDatos2025\\EstructuraDatos2025\\EstructuraDatos2025.csproj",
         "packagesPath": "C:\\Users\\DAMIAN\\.nuget\\packages\\",
-        "outputPath": "d:\\UEA\\03_2024-2025\\03_ESTRUCTURA_DATOS\\PROYECTOS\\EstructuraDatos2025\\EstructuraDatos2025\\obj\\",
+        "outputPath": "D:\\UEA\\03_2024-2025\\03_ESTRUCTURA_DATOS\\PROYECTOS\\EstructuraDatos2025\\EstructuraDatos2025\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DAMIAN\\AppData\\Roaming\\NuGet\\NuGet.Config"
