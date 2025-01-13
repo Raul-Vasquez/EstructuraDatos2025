@@ -1,57 +1,111 @@
-﻿// Se realiza las funciones para mejorar la presentacion del codigo
-// Programa Principal y llamadas al mismo 
-Encabezado ();
+﻿﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-while (true)
+namespace EjerciciosListas
 {
-    opciones();
-    string? opcion = Console.ReadLine(); //Readline -- Lee desde teclado
-    
-    switch (opcion)
+    public class Curso
     {
-        case "0":
-            return;
-        case "1":
-            Console.WriteLine("At work - Tipos de datos básicos");
-            break;
-        case "2":
-            Console.WriteLine("At work - POO encapsulamiento");
-            break;
-        case "3":
-            Console.WriteLine("Array y matrices");
-            break;
-        //case "4":
-        //     Console.WriteLine("Men at work - .....");
-        //     break;
-        default:
-            Console.WriteLine("Opción no válida, pulse una tecla para continuar");
-            break;
-    } 
-    piePagina ();
-} 
+        public string Nombre { get; set; }
+        public List<string> Asignaturas { get; set; }
 
+        public Curso(string nombre)
+        {
+            Nombre = nombre;
+            Asignaturas = new List<string>();
+        }
 
-// 3 Funciones Basica como el Encabezado, Cuerpo/Desarrollo y el Pie de Pagina
-static void Encabezado(){
-    Console.WriteLine("____________________________________");
-    Console.WriteLine("UNIVERSIDAD ESTATAL AMANZONICA");
-    Console.WriteLine("CARRERA DE TECNOLOGIAS DE LA INFORMACION");
-    Console.WriteLine("Modalidad de estudios En Línea");
-    Console.WriteLine("____________________________________\n");
-}
+        public void AgregarAsignatura(string asignatura)
+        {
+            Asignaturas.Add(asignatura);
+        }
 
-static void opciones(){
-    Console.WriteLine("Eliga la opcion que quiera mostar");
-    Console.WriteLine("1. Tipos de Datos Basicos");
-    Console.WriteLine("2. POO");
-    Console.WriteLine("3. Arreglos y Matrices");
-    Console.WriteLine("Presione 0 para salir\n");
+        public void MostrarAsignaturas()
+        {
+            Console.WriteLine($"Asignaturas del curso {Nombre}:");
+            foreach (string asignatura in Asignaturas)
+            {
+                Console.WriteLine($"- {asignatura}");
+            }
+        }
+    }
 
-}
+    public class ManejadorListas
+    {
+        public List<string> OrdenarPalabras(List<string> palabras)
+        {
+            return palabras.OrderBy(p => p).ToList();
+        }
 
-static void piePagina(){
-    Console.WriteLine("*******************************************************");
-    Console.WriteLine("Elaborado por: "+"Raul Vasquez Lascano");
-    Console.WriteLine("Tutor: "+ "DR. DELFÍN BERNABÉ ORTEGA TENEZACA, PHD");
-    Console.WriteLine("*******************************************************");
+        public List<int> EliminarDuplicados(List<int> numeros)
+        {
+            return numeros.Distinct().ToList();
+        }
+
+        public int ContarOcurrencias(List<int> numeros, int elemento)
+        {
+            return numeros.Count(n => n == elemento);
+        }
+
+        public List<int> ElementosComunes(List<int> lista1, List<int> lista2)
+        {
+            return lista1.Intersect(lista2).ToList();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Ejercicio 2:
+            Curso miCurso = new Curso("Tercer Semestre Primer Parcial");
+            miCurso.AgregarAsignatura("Estructuras de Datos");
+            miCurso.AgregarAsignatura("Desarrollo de Aplicaciones Web");
+            miCurso.AgregarAsignatura("Caleado Estructurado");
+            miCurso.MostrarAsignaturas();
+
+            Console.WriteLine("\n");
+
+            // Ejercicio 5:
+            ManejadorListas manejador = new ManejadorListas();
+            List<string> palabras = new List<string>() { "Saludos", "Jhon", "McCLane" };
+            List<string> palabrasOrdenadas = manejador.OrdenarPalabras(palabras);
+            Console.WriteLine("Palabras ordenadas:");
+            foreach (string palabra in palabrasOrdenadas)
+            {
+                Console.WriteLine(palabra);
+            }
+
+            Console.WriteLine("\n");
+
+            // Ejercicio 10:
+            List<int> numeros = new List<int>() { 8, 4, 4, 7, 9, 9, 3 };
+            List<int> numerosSinDuplicados = manejador.EliminarDuplicados(numeros);
+            Console.WriteLine("Números sin duplicados:");
+            foreach (int numero in numerosSinDuplicados)
+            {
+                Console.WriteLine(numero);
+            }
+
+            Console.WriteLine("\n");
+
+            // Ejercicio 14:
+            List<int> numeros2 = new List<int>() { 1, 2, 2, 3, 4, 4, 5 };
+            int elemento = 2;
+            int ocurrencias = manejador.ContarOcurrencias(numeros2, elemento);
+            Console.WriteLine($"El elemento {elemento} aparece {ocurrencias} veces en la lista.");
+
+            Console.WriteLine("\n");
+
+            // Ejercicio 18 Elementos Comunes:
+            List<int> lista1 = new List<int>() { 20, 22, 24, 26, 30 };
+            List<int> lista2 = new List<int>() { 30, 22, 22, 36, 42 };
+            List<int> elementosComunes = manejador.ElementosComunes(lista1, lista2);
+            Console.WriteLine("Elementos comunes:");
+            foreach (int numero in elementosComunes)
+            {
+                Console.WriteLine(numero);
+            }
+        }
+    }
 }
