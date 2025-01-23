@@ -1,1 +1,3 @@
-﻿﻿InvertirLista.run();
+﻿﻿
+InvertirLista.run();
+EjericioDosListas.run();
