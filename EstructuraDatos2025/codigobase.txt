@@ -1,0 +1,5 @@
+public static class ......{
+    public static void run (){
+        // pegar aqui el codigo
+    }
+}
