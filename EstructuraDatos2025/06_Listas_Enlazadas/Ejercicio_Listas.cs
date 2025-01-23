@@ -2,15 +2,18 @@ using System.Threading.Tasks.Dataflow;
 
 public static class InvertirLista{
     public static void run (){
+    Console.WriteLine("--------------------------------");
+    Console.WriteLine("Ejericio 1 de Listas Enlazadas");
+    Console.WriteLine("---------------------------------");
       // Crear la lista enlazada
     ListaEnlazada lista = new ListaEnlazada();
 
     // Agregar elementos a la lista
-    lista.Agregar(1);
-    lista.Agregar(2);
-    lista.Agregar(3);
     lista.Agregar(4);
     lista.Agregar(5);
+    lista.Agregar(6);
+    lista.Agregar(3);
+    lista.Agregar(8);
 
     // Mostrar la lista original
     System.Console.WriteLine("Lista original:");
