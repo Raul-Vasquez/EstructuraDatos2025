@@ -1,3 +1,2 @@
-﻿﻿
-InvertirLista.run();
-EjericioDosListas.run();
+﻿﻿semana7.run();
+ListaSimpleCompuesta.run();
