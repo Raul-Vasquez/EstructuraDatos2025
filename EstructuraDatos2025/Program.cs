@@ -1,2 +1,2 @@
-﻿﻿semana7.run();
-ListaSimpleCompuesta.run();
+﻿﻿
+Operaciones_Conjutos.run();
