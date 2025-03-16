@@ -1,21 +1,21 @@
-public static class GestorRevistas
+public static class BusquedaCatalogoRevista
 {
     public static void run()
     {
-        // Crear una instancia de la clase CatalogoRevistas.
-        CatalogoRevistas catalogo = new CatalogoRevistas();
+        // Crear una instancia de la clase CatalogoRevistasBST.
+        CatalogoRevistasBST catalogo = new CatalogoRevistasBST(); // BST son las siglas en inglés de "Binary Search Tree"
 
         // Agregamos 10 títulos al catálogo.
-        catalogo.AgregarRevista("National Geographic");
-        catalogo.AgregarRevista("Time");
-        catalogo.AgregarRevista("Forbes");
-        catalogo.AgregarRevista("Vogue");
-        catalogo.AgregarRevista("Science");
-        catalogo.AgregarRevista("Nature");
-        catalogo.AgregarRevista("PC Magazine");
-        catalogo.AgregarRevista("Sports Illustrated");
-        catalogo.AgregarRevista("The Economist");
-        catalogo.AgregarRevista("Rolling Stone");
+        catalogo.Insertar("Ecuador debate");
+        catalogo.Insertar("Revista amazónica: Ciencia y tecnología");
+        catalogo.Insertar("Dominio de las Ciencias");
+        catalogo.Insertar("CienciAmérica");
+        catalogo.Insertar("Yachana");
+        catalogo.Insertar("Revista ESPAMCiencia");
+        catalogo.Insertar("Cumbres");
+        catalogo.Insertar("ReHuSo");
+        catalogo.Insertar("Chakiñan");
+        catalogo.Insertar("Enfoque UTE");
 
         // Variable para controlar el bucle.
         string opcion = "";
@@ -27,6 +27,7 @@ public static class GestorRevistas
             Console.WriteLine("\nCatálogo de Revistas");
             Console.WriteLine("1. Buscar Revista");
             Console.WriteLine("2. Salir");
+            Console.WriteLine("3. Mostrar Catalogo");
 
             // Obtenemos la opción del usuario.
             opcion = Console.ReadLine()!;
@@ -41,7 +42,7 @@ public static class GestorRevistas
                 if (!string.IsNullOrEmpty(tituloBuscado))
                 {
                     // Buscamos la revista en el catálogo.
-                    if (catalogo.BuscarRevista(tituloBuscado))
+                    if (catalogo.Buscar(tituloBuscado))
                     {
                         Console.WriteLine("Encontrado");
                     }
@@ -54,6 +55,11 @@ public static class GestorRevistas
                 {
                     Console.WriteLine("Título de revista no válido.");
                 }
+            }
+            //Si la opcion es 3, muestra el catalogo
+            else if (opcion == "3")
+            {
+                catalogo.MostrarCatalogo();
             }
             // Si la opción es 2, salimos del bucle.
             else if (opcion == "2")
@@ -68,36 +74,93 @@ public static class GestorRevistas
         }
     }
 
-    public class CatalogoRevistas
+    public class Nodo
     {
-        // Lista para almacenar los títulos de las revistas.
-        private List<string> revistas = new List<string>();
+        public string Titulo { get; set; }
+        public Nodo Izquierdo { get; set; }
+        public Nodo Derecho { get; set; }
 
-        // Método para agregar títulos al catálogo.
-        public void AgregarRevista(string titulo)
+        public Nodo(string titulo)
         {
-            revistas.Add(titulo);
+            Titulo = titulo;
+            Izquierdo = null!;
+            Derecho = null!;
+        }
+    }
+
+    public class CatalogoRevistasBST
+    {
+        private Nodo raiz;
+
+        public CatalogoRevistasBST()
+        {
+            raiz = null!;
         }
 
-        // Método para buscar un título en el catálogo.
-        public bool BuscarRevista(string tituloBuscado)
+        public void Insertar(string titulo)
         {
-            // Convertimos el título buscado a minúsculas para hacer la búsqueda insensible a mayúsculas y minúsculas.
-            tituloBuscado = tituloBuscado.ToLower();
+            raiz = InsertarRecursivo(raiz, titulo);
+        }
 
-            // Recorremos la lista de revistas.
-            foreach (string revista in revistas)
+        private Nodo InsertarRecursivo(Nodo nodo, string titulo)
+        {
+            if (nodo == null)
             {
-                // Convertimos el título de la revista a minúsculas para comparar.
-                if (revista.ToLower() == tituloBuscado)
-                {
-                    // Si encontramos el título, devolvemos true.
-                    return true;
-                }
+                return new Nodo(titulo);
             }
 
-            // Si no encontramos el título, devolvemos false.
-            return false;
+            if (string.Compare(titulo, nodo.Titulo, StringComparison.OrdinalIgnoreCase) < 0)
+            {
+                nodo.Izquierdo = InsertarRecursivo(nodo.Izquierdo, titulo);
+            }
+            else if (string.Compare(titulo, nodo.Titulo, StringComparison.OrdinalIgnoreCase) > 0)
+            {
+                nodo.Derecho = InsertarRecursivo(nodo.Derecho, titulo);
+            }
+
+            return nodo;
+        }
+
+        public bool Buscar(string titulo)
+        {
+            return BuscarRecursivo(raiz, titulo);
+        }
+
+        private bool BuscarRecursivo(Nodo nodo, string titulo)
+        {
+            if (nodo == null)
+            {
+                return false;
+            }
+
+            if (string.Equals(titulo, nodo.Titulo, StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+
+            if (string.Compare(titulo, nodo.Titulo, StringComparison.OrdinalIgnoreCase) < 0)
+            {
+                return BuscarRecursivo(nodo.Izquierdo, titulo);
+            }
+            else
+            {
+                return BuscarRecursivo(nodo.Derecho, titulo);
+            }
+        }
+
+        public void MostrarCatalogo()
+        {
+            MostrarCatalogoRecursivo(raiz);
+        }
+
+        private void MostrarCatalogoRecursivo(Nodo nodo)
+        {
+            if (nodo != null)
+            {
+                MostrarCatalogoRecursivo(nodo.Izquierdo);
+                Console.WriteLine(nodo.Titulo);
+                MostrarCatalogoRecursivo(nodo.Derecho);
+            }
         }
     }
 }

@@ -21,10 +21,10 @@ public static class EjericioDosListas{
 
     // Pedir al usuario el rango de valores
     System.Console.WriteLine("Introduce el valor mínimo del rango:");
-    int minimoRango = int.Parse(System.Console.ReadLine());
+    int minimoRango = int.Parse(System.Console.ReadLine()!);
 
     System.Console.WriteLine("Introduce el valor máximo del rango:");
-    int maximoRango = int.Parse(System.Console.ReadLine());
+    int maximoRango = int.Parse(System.Console.ReadLine()!);
 
     // Eliminar los nodos fuera del rango
     listaDeNumeros.EliminarNumerosFueraDeRango(minimoRango, maximoRango);
@@ -75,7 +75,7 @@ class ListaEnlazadaPersonalizada
     public void EliminarNumerosFueraDeRango(int rangoMinimo, int rangoMaximo)
     {
         NodoDeLista nodoActual = cabeza;
-        NodoDeLista nodoAnterior = null;
+        NodoDeLista nodoAnterior = null!;
 
         while (nodoActual != null)
         {
@@ -108,6 +108,6 @@ class NodoDeLista
     public NodoDeLista(int valor)
     {
         Valor = valor;
-        Siguiente = null;
+        Siguiente = null!;
     }
 }
