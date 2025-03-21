@@ -36,7 +36,7 @@ class Nodo
     public Nodo(int valor)
     {
         Valor = valor;
-        Siguiente = null;
+        Siguiente = null!;
     }
 }
 
@@ -48,7 +48,7 @@ class ListaEnlazada
     public void Agregar(int valor)
     {
         Nodo nuevoNodo = new Nodo(valor);
-        if (cabeza == null)
+        if (cabeza == null!)
         {
             cabeza = nuevoNodo;
         }
@@ -66,9 +66,9 @@ class ListaEnlazada
     // Método para invertir la lista enlazada
     public void Invertir()
     {
-        Nodo anterior = null;
+        Nodo anterior = null!;
         Nodo actual = cabeza;
-        Nodo siguiente = null;
+        Nodo siguiente = null!;
 
         while (actual != null)
         {
